@@ -1,6 +1,5 @@
 #Don't add Trimmomatic and SPAdes to Git
-Trimmomatic/**
-SPAdes/**
+ref/**
 
 #Don't add original data to Git
 data/orig/**
