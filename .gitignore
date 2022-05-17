@@ -3,6 +3,11 @@ ref/**
 
 #Don't add original data to Git
 data/orig/**
+#Don't add assemblies to Git
+data/gen/assemblies/**
+
+#Don't add spades_jobs files to git
+spades_job.*
 
 ### R ###
 # History files
