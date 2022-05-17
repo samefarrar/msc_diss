@@ -9,6 +9,10 @@ data/gen/assemblies/**
 #Don't add spades_jobs files to git
 spades_job.*
 
+#Don't add logs to git
+*.e
+*.o
+
 ### R ###
 # History files
 .Rhistory
