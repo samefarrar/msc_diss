@@ -1,6 +1,9 @@
 #Don't add Trimmomatic and SPAdes to Git
 ref/**
 
+#Don't add reference genomes
+.tar.*
+
 #Don't add original data to Git
 data/orig/**
 #Don't add assemblies to Git
