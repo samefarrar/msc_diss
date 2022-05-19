@@ -12,10 +12,10 @@ source activate poppunk
 cd /rds/general/user/sef17/home/msc_diss/data/gen/assemblies
 
 # create the database
-poppunk --create-db --r-files poppunk_12f.txt --output all_refine --threads 8 --overwrite --min-k 15 --max-k 29 --k-step 3 --plot-fit 5 --length-range 1900000 2500000
+poppunk --create-db --r-files poppunk_12f.txt --output ../result/all_refine --threads 8 --overwrite --min-k 15 --max-k 29 --k-step 3 --plot-fit 5 --length-range 1900000 2500000
 # fit to a bayesian gaussian mixture model
-poppunk --fit-model bgmm --distances all_refine/all_refine.dists --output all_refine --ref-db all_refine --threads 8 --overwrite --min-k 15 --max-k 29 --k-step 3 --K 5 --length-range 1900000 2500000
+poppunk --fit-model bgmm --distances ../result/all_refine/../result/all_refine.dists --output ../result/all_refine --ref-db ../result/all_refine --threads 8 --overwrite --min-k 15 --max-k 29 --k-step 3 --K 5 --length-range 1900000 2500000
 # optimise the network score from a model already fitted by bgmm
-poppunk --fit-model refine --distances all_refine/all_refine.dists --output all_refine --ref-db all_refine --threads 8 --overwrite --min-k 15 --max-k 29 --k-step 3 --K 5
+poppunk --fit-model refine --distances ../result/all_refine/../result/all_refine.dists --output ../result/all_refine --ref-db ../result/all_refine --threads 8 --overwrite --min-k 15 --max-k 29 --k-step 3 --K 5
 # visulise the poppunk clustering results for the use of microreact 
-poppunk_visualise --ref-db all_refine --output all_refine --microreact
+poppunk_visualise --ref-db ../result/all_refine --output ../result/all_refine --microreact
