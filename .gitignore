@@ -16,6 +16,9 @@ spades_job.*
 *.e
 *.o
 
+#Results are too big
+result/*
+
 ### R ###
 # History files
 .Rhistory
