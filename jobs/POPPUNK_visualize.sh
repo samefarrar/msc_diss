@@ -1,7 +1,7 @@
 #! /bin/sh
-#PBS -N poppunk_visualize
-#PBS -o poppunk_visualize.o
-#PBS -e poppunk_visualize.e
+#PBS -N poppunk_visualize_nj
+#PBS -o poppunk_visualize_nj.o
+#PBS -e poppunk_visualize_nj.e
 #PBS -l walltime=72:00:00
 #PBS -l select=1:ncpus=16:mem=500gb
 
