@@ -3,7 +3,7 @@
 #PBS -o poppunk_visualize.o
 #PBS -e poppunk_visualize.e
 #PBS -l walltime=72:00:00
-#PBS -l select=1:ncpus=16:mem=360gb
+#PBS -l select=1:ncpus=16:mem=500gb
 
 module load anaconda3/personal
 
