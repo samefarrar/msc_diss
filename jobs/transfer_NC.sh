@@ -1,9 +1,6 @@
 #! /bin/sh
+#PBS -N transfer_to_ephem
+#PBS -l walltime=72:00:00
+#PBS -l select=1:ncpus=4:mem=16gb
 
-file = $1
-
-filetype = $2
-
-newdir = /rds/general/project/pathogen_surveillance/live/12F_epidemiology/sf_msc/$filetype/$(date +%d-%m-%y)
-
-cp -r file newdir
+mv /rds/general/user/sef17/home/msc_diss/data/orig/* /rds/general/user/sef17/ephemeral
