@@ -8,6 +8,8 @@ ref/**
 data/orig/**
 #Don't add assemblies to Git
 data/gen/assemblies/**
+#Don't add trimmed reads to Git
+data/gen/trimmed/**
 
 #Don't add spades_jobs files to git
 spades_job.*
