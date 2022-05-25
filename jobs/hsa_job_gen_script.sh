@@ -24,5 +24,5 @@ echo "
 #PBS -N hsa_spades_job
 #PBS -J 1-$N
 
-/rds/general/user/ncrouche/home/WORK/pathogen_surveillance/live/12F_epidemiology/fastqs/spades_job.\${PBS_ARRAY_INDEX}
+/rds/general/user/sef17/home/msc_diss/jobs/SPAdes/hsa_spades_job.\${PBS_ARRAY_INDEX}
 " > /rds/general/user/sef17/home/msc_diss/jobs/spades_array.sh
