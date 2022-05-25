@@ -11,9 +11,8 @@ data/gen/assemblies/**
 #Don't add trimmed reads to Git
 data/gen/trimmed/**
 
-#Don't add spades_jobs files to git
-spades_job.*
-trim_job.*
+#Don't add _jobs files to git
+*_job.*
 
 #Don't add logs to git
 *.e
