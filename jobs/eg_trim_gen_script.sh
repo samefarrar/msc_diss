@@ -8,7 +8,7 @@ for f in *_R1.fastq.gz; do
   FORWARD_FASTQ=${f};
   REVERSE_FASTQ=${f%_R1.fastq.gz}_R2.fastq.gz;
   # print trimmomatic jobs for all fastqs and run
-  echo -en "module load anaconda3/personal\nsource activate trim039\ncd /rds/general/user/sef17/home/msc_diss/data/orig/12F_epidemiology/raw_fastqs\njava -jar /rds/general/user/sef17/home/msc_diss/ref/Trimmomatic-0.39/dist/jar/trimmomatic-0.39.jar PE -threads 8 -phred33 ${FORWARD_FASTQ}  ${REVERSE_FASTQ} /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R1.fastq.gz /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R1_unpaired.fastq.gz /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R2.fastq.gz /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R2_unpaired.fastq.gz" > /rds/general/user/sef17/home/msc_diss/jobs/Trim/trim_job.$N;
+  echo -en "module load anaconda3/personal\nsource activate trim039\ncd /rds/general/user/sef17/home/msc_diss/data/orig/12F_epidemiology/raw_fastqs\njava -jar /rds/general/user/sef17/home/msc_diss/ref/Trimmomatic-0.39/dist/jar/trimmomatic-0.39.jar PE -threads 4 -phred33 ${FORWARD_FASTQ}  ${REVERSE_FASTQ} /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R1.fastq.gz /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R1_unpaired.fastq.gz /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R2.fastq.gz /rds/general/user/sef17/home/msc_diss/data/gen/trimmed/${ISOLATE}_R2_unpaired.fastq.gz ILLUMINACLIP:/rds/general/user/sef17/home/msc_diss/ref/Trimmomatic-0.39/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36" > /rds/general/user/sef17/home/msc_diss/jobs/Trim/trim_job.$N;
   chmod 770 /rds/general/user/sef17/home/msc_diss/jobs/Trim/trim_job.$N;
   N=($N+1);
 done
@@ -25,11 +25,3 @@ echo "
 
 /rds/general/user/sef17/home/msc_diss/jobs/Trim/trim_job.\${PBS_ARRAY_INDEX}
 " > /rds/general/user/sef17/home/msc_diss/jobs/trim_array.sh
-
-for f in *.streptococcus-pneumoniae-typing.ngsservice.processed.R1.fastq.gz; do
-  #define variables
-  ISOLATE=${f%.streptococcus-pneumoniae-typing.ngsservice.processed.R1.fastq.gz};
-  # print trimmomatic jobs for all fastqs and run
-  mv ${f} ${ISOLATE}_R1.fastq.gz
-  mv ${ISOLATE}.streptococcus-pneumoniae-typing.ngsservice.processed.R2.fastq.gz ${ISOLATE}_R2.fastq.gz
-done
