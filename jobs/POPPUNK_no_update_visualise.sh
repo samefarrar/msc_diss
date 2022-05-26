@@ -11,4 +11,4 @@ source activate poppunk
 
 cd /rds/general/user/sef17/home/msc_diss/data/gen/assemblies
 
-poppunk_visualise --ref-db /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v5 --query-db /rds/general/user/sef17/home/msc_diss/result/no_update  --threads 8 --microreact --previous-clustering /rds/general/user/sef17/home/msc_diss/result/no_update/no_update_clusters.csv --info-csv /rds/general/user/sef17/home/msc_diss/ref/12F_from_GPS_epidata.csv --output /rds/general/user/sef17/home/msc_diss/result/nu_visualise
+poppunk_visualise --ref-db /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v5 --query-db /rds/general/user/sef17/home/msc_diss/result/no_update  --threads 8 --microreact --previous-clustering /rds/general/user/sef17/home/msc_diss/result/no_update/no_update_clusters.csv --info-csv /rds/general/user/sef17/home/msc_diss/ref/12F_epidata_long_lat.csv --output /rds/general/user/sef17/home/msc_diss/result/nu_visualise
