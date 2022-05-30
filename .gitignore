@@ -22,6 +22,7 @@ data/gen/trimmed/**
 
 #Results are too big
 result/*
+result/all_refine/**
 
 ### R ###
 # History files
