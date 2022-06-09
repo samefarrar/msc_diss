@@ -11,4 +11,4 @@ source activate poppunk
 
 cd /rds/general/user/sef17/home/msc_diss/data/gen/assemblies
 
-poppunk_assign --db /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v5 --query /rds/general/user/sef17/home/msc_diss/data/gen/assemblies/all_12f.txt --output /rds/general/user/sef17/home/msc_diss/result/poppunk_clusters --threads 8 --update-db
+poppunk_assign --db /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v5 --query /rds/general/user/sef17/home/msc_diss/data/gen/assemblies/all_12f.txt --output /rds/general/user/sef17/home/msc_diss/result/poppunk_clusters --threads 16 --update-db
