@@ -19,6 +19,6 @@ HSA_epidata <- HSA_epidata %>% select(where(not_all_na))
 
 # Test Merge
 test1 <- merge(cluster_membership, GPS_12F_long_lat, by.x = "id", by.y = "Lane.Id", all.x = TRUE)
-test2 <- merge(cluster_membership, HSA_epidata, by.x = "id", by.y = "ngsid", all.x = TRUE)
 
 HSA_epidata <- HSA_epidata %>% mutate(combid = paste(ngsid, "_", molis_short, sep = ""))
+
