@@ -4,4 +4,4 @@
 #PBS -l select=1:ncpus=2:mem=16gb
 #PBS -N hsa_spades_job
 
-/rds/general/user/sef17/home/msc_diss/jobs/SPAdes/hsa_spades_job.37
+/rds/general/user/sef17/home/msc_diss/jobs/SPAdes/spades_job.150
