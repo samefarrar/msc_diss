@@ -1,0 +1,1 @@
+diff  <(for x in */scaffolds.fasta; do echo "$(dirname "$x")" ; done) <(printf "%s\n" *)
