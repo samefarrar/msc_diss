@@ -10,6 +10,7 @@ data/orig/**
 data/gen/assemblies/**
 #Don't add trimmed reads to Git
 data/gen/trimmed/**
+data/gen/faulty_assembly/**
 
 #Don't add results to Git
 
