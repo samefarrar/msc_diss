@@ -11,4 +11,4 @@ source activate poppunk
 
 cd /rds/general/user/sef17/home/msc_diss/data/gen/assemblies
 
-poppunk_visualise --ref-db /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v5 --query-db /rds/general/user/sef17/home/msc_diss/result/nu_assign --output /rds/general/user/sef17/home/msc_diss/result/nu_vis  --threads 16 --microreact --previous-clustering /rds/general/user/sef17/home/msc_diss/result/nu_assign/nu_assign_clusters.csv
+poppunk_visualise --ref-db /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v5 --query-db /rds/general/user/sef17/home/msc_diss/result/nu_assign --output /rds/general/user/sef17/home/msc_diss/result/nu_vis  --threads 16 --microreact --previous-clustering /rds/general/user/sef17/home/msc_diss/result/nu_assign/nu_assign_clusters.csv --external-clustering /rds/general/user/sef17/home/msc_diss/ref/reference_db/GPS_v6_external_clusters.csv
