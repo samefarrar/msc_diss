@@ -17,6 +17,9 @@ data/gen/faulty_assembly/**
 #Don't add _jobs files to git
 *_job.*
 
+#Don't add draft files (ones that I use to write bash scripts)
+draft-*
+
 #Don't add logs to git
 *.e
 *.o
