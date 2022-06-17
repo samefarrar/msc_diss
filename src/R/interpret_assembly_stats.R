@@ -26,6 +26,6 @@ length_hist <- ggplot(assembly_stats, aes(x = total_length)) + geom_histogram(co
 
 # Add mean line to histogram
 count_hist + geom_vline(aes(xintercept=mean(N_count)), color = "blue", linetype = "dashed", size = 1)
-length_hist + geom_vline(aes(xintercept=mean(total_length)), color = "blue", linetype = "dashed", size = 1)
+length_hist + geom_vline(aes(xintercept=mean(total_length)), color = "blue", linetype = "dashed", size = 1) + scale_x_log10()
 
-removed_genomes
+removed_genomes %>% select(c(id, total_length, N_count))
