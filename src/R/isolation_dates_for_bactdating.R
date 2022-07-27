@@ -27,7 +27,9 @@ GPSC_55_dates <- tibble(GPSC_55$tip.label)
 GPSC_55_dates <- merge(GPSC_55_dates, cluster_dates, by.x = "GPSC_55$tip.label", by.y = "id")
 GPSC_55_dates <- GPSC_55_dates %>% mutate(merged_col_date = decimal_date(merged_col_date))
 
-res = bactdate(GPSC_26, GPSC_26_dates$merged_col_date)
-plot(res, 'trace')
-
-
+saveRDS(GPSC_26, file = "gubbins_GPSC26")
+saveRDS(GPSC_26_dates, file = "gubbins_GPSC26_dates")
+saveRDS(GPSC_32, file = "gubbins_GPSC32")
+saveRDS(GPSC_32_dates, file = "gubbins_GPSC32_dates")
+saveRDS(GPSC_55, file = "gubbins_GPSC55")
+saveRDS(GPSC_55_dates, file = "gubbins_GPSC55_dates")
